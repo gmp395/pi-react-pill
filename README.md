@@ -128,9 +128,8 @@ Pulsa sobre la portada para consultar la presentación completa:
 
 También puedes acceder directamente a los documentos:
 
-- [Ver o descargar la presentación en PDF](./docs/react-presentation.pdf?raw=1)
+- [Ver la presentación en PDF](./docs/react-presentation.pdf)
 - [Descargar el guion de la presentación](./docs/guion-presentacion.docx?raw=1)
-
 ## Recursos adicionales
 
 - [Documentación oficial de React](https://react.dev/)
