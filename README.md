@@ -81,7 +81,7 @@ Durante el live coding se desarrolla una pequeña aplicación para demostrar:
 ## Presentación
 
 Las diapositivas utilizadas durante la exposición se encuentran en:
-[Ver presentación en PDF](https://github.com/gmp395/react-pill/blob/main/docs/react-presentation.pdf)
+[Ver o descargar la presentación en PDF](./docs/react-presentation.pdf?raw=1)
 
 ## Recursos adicionales
 
