@@ -134,7 +134,6 @@ Documentación de la exposición:
 
 - [Ver la presentación en PDF](./docs/react-presentation.pdf)
 - [Leer el guion de la presentación](./docs/guion-presentacion.md)
-- [Descargar el guion editable en Word](./docs/guion-presentacion.docx?raw=1)
 
 ## Recursos adicionales
 
