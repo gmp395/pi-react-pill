@@ -1,6 +1,8 @@
-# Introducción a React
+# Píldora formativa: introducción a React
 
-Repositorio creado para la exposición de una píldora formativa sobre React. Correspondiente a la píldora formativa de Frontend realizada durante el Bootcamp Full Stack.
+Repositorio creado para una píldora formativa de Frontend sobre React, desarrollada durante una formación intensiva en Desarrollo Web Full Stack.
+
+La exposición combina una introducción teórica a los fundamentos de React con una demostración práctica mediante *live coding*.
 
 ## Índice
 
@@ -8,88 +10,133 @@ Repositorio creado para la exposición de una píldora formativa sobre React. Co
 - [Contenido del repositorio](#contenido-del-repositorio)
 - [Conceptos tratados](#conceptos-tratados)
 - [Tecnologías utilizadas](#tecnologías-utilizadas)
+- [Requisitos previos](#requisitos-previos)
 - [Instalación](#instalación)
 - [Parte práctica](#parte-práctica)
 - [Presentación](#presentación)
 - [Recursos adicionales](#recursos-adicionales)
-- [Autora](#autora)
+- [Autoría](#autoría)
 
 ## Objetivo
 
-El objetivo de esta presentación es explicar algunos de los conceptos fundamentales de React mediante una combinación de explicación teórica y live coding.
+El objetivo de esta píldora formativa es explicar algunos de los conceptos fundamentales de React mediante una combinación de teoría y práctica.
+
+Durante la exposición se muestra cómo crear una pequeña aplicación utilizando componentes, estado, eventos y renderizado dinámico.
 
 ## Contenido del repositorio
 
-* Código utilizado durante la demostración práctica.
-* Presentación utilizada durante la exposición.
-* Recursos adicionales para ampliar conocimientos sobre React.
+```text
+pi-react-pill/
+├── docs/
+│   ├── guion-presentacion.docx
+│   ├── react-presentation.pdf
+│   └── react-presentation-cover.png
+├── public/
+├── src/
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── README.md
+└── vite.config.js
+```
+
+- `src/`: código fuente utilizado durante la demostración práctica.
+- `public/`: recursos públicos de la aplicación.
+- `docs/react-presentation.pdf`: presentación utilizada durante la exposición.
+- `docs/react-presentation-cover.png`: portada de la presentación.
+- `docs/guion-presentacion.docx`: guion de apoyo para la exposición.
 
 ## Conceptos tratados
 
-* Componentes
-* JSX
-* Props
-* Eventos
-* Estado con useState
-* Renderizado condicional
-* Renderizado de listas con map()
+- Componentes.
+- JSX.
+- Props.
+- Gestión de eventos.
+- Estado con el hook `useState`.
+- Renderizado condicional.
+- Renderizado de listas con `map()`.
+- Actualización dinámica de la interfaz.
 
 ## Tecnologías utilizadas
 
-* React
-* Vite
-* JavaScript
-* JSX
+- React.
+- Vite.
+- JavaScript.
+- JSX.
+- CSS.
+- Node.js.
+- npm.
+
+## Requisitos previos
+
+Para ejecutar el proyecto es necesario tener instalados:
+
+- [Node.js](https://nodejs.org/)
+- npm, incluido con Node.js
+- Git
 
 ## Instalación
 
-Clonar el repositorio:
+Clona el repositorio:
 
-```
-git clone https://github.com/gmp395/react-pill.git
+```bash
+git clone https://github.com/gmp395/pi-react-pill.git
 ```
 
-Instalar dependencias:
+Accede a la carpeta del proyecto:
 
+```bash
+cd pi-react-pill
 ```
+
+Instala las dependencias:
+
+```bash
 npm install
 ```
 
-Ejecutar el proyecto:
+Ejecuta el proyecto en modo desarrollo:
 
-```
+```bash
 npm run dev
 ```
 
-Abrir en el navegador:
+Abre en el navegador la dirección indicada por Vite. Normalmente:
 
-```
+```text
 http://localhost:5173
-
 ```
 
 ## Parte práctica
 
-Durante el live coding se desarrolla una pequeña aplicación para demostrar:
+Durante el *live coding* se desarrolla una pequeña aplicación para demostrar:
 
-1. Creación de componentes.
-2. Uso de useState.
-3. Gestión de eventos mediante onClick.
-4. Renderizado condicional.
-5. Renderizado de listas con map().
+1. La creación de componentes.
+2. El uso del hook `useState`.
+3. La gestión de eventos mediante `onClick`.
+4. El renderizado condicional.
+5. El renderizado de listas mediante `map()`.
+6. La actualización de la interfaz cuando cambia el estado.
 
 ## Presentación
 
-Las diapositivas utilizadas durante la exposición se encuentran en:
-[Ver o descargar la presentación en PDF](./docs/react-presentation.pdf?raw=1)
+Pulsa sobre la portada para consultar la presentación completa:
+
+[![Portada de la presentación Introducción a React](./docs/react-presentation-cover.png)](./docs/react-presentation.pdf)
+
+También puedes acceder directamente a los documentos:
+
+- [Ver o descargar la presentación en PDF](./docs/react-presentation.pdf?raw=1)
+- [Descargar el guion de la presentación](./docs/guion-presentacion.docx?raw=1)
 
 ## Recursos adicionales
 
-* React: https://react.dev
-* Vite: https://vitejs.dev
-* MDN Web Docs: https://developer.mozilla.org
+- [Documentación oficial de React](https://react.dev/)
+- [Documentación oficial de Vite](https://vite.dev/)
+- [MDN Web Docs](https://developer.mozilla.org/es/)
 
-## Autora
+## Autoría
 
-Gema Miguel — [gmp395](https://github.com/gmp395)
-Bootcamp Full Stack Development
+Proyecto desarrollado por [Gema Miguel Pinillos](https://github.com/gmp395).
