@@ -13,7 +13,7 @@ La exposición combina una introducción teórica a los fundamentos de React con
 - [Requisitos previos](#requisitos-previos)
 - [Instalación](#instalación)
 - [Parte práctica](#parte-práctica)
-- [Presentación](#presentación)
+- [Presentación y guion](#presentación-y-guion)
 - [Recursos adicionales](#recursos-adicionales)
 - [Autoría](#autoría)
 
@@ -29,8 +29,9 @@ Durante la exposición se muestra cómo crear una pequeña aplicación utilizand
 pi-react-pill/
 ├── docs/
 │   ├── guion-presentacion.docx
-│   ├── react-presentation.pdf
-│   └── react-presentation-cover.png
+│   ├── guion-presentacion.md
+│   ├── react-presentation-cover.png
+│   └── react-presentation.pdf
 ├── public/
 ├── src/
 ├── .gitignore
@@ -44,9 +45,10 @@ pi-react-pill/
 
 - `src/`: código fuente utilizado durante la demostración práctica.
 - `public/`: recursos públicos de la aplicación.
-- `docs/react-presentation.pdf`: presentación utilizada durante la exposición.
+- `docs/react-presentation.pdf`: diapositivas utilizadas durante la exposición.
 - `docs/react-presentation-cover.png`: portada de la presentación.
-- `docs/guion-presentacion.docx`: guion de apoyo para la exposición.
+- `docs/guion-presentacion.md`: versión del guion preparada para su lectura en GitHub.
+- `docs/guion-presentacion.docx`: versión editable del guion.
 
 ## Conceptos tratados
 
@@ -58,6 +60,7 @@ pi-react-pill/
 - Renderizado condicional.
 - Renderizado de listas con `map()`.
 - Actualización dinámica de la interfaz.
+- Funcionamiento general del Virtual DOM.
 
 ## Tecnologías utilizadas
 
@@ -68,6 +71,7 @@ pi-react-pill/
 - CSS.
 - Node.js.
 - npm.
+- Git y GitHub.
 
 ## Requisitos previos
 
@@ -120,16 +124,18 @@ Durante el *live coding* se desarrolla una pequeña aplicación para demostrar:
 5. El renderizado de listas mediante `map()`.
 6. La actualización de la interfaz cuando cambia el estado.
 
-## Presentación
+## Presentación y guion
 
 Pulsa sobre la portada para consultar la presentación completa:
 
 [![Portada de la presentación Introducción a React](./docs/react-presentation-cover.png)](./docs/react-presentation.pdf)
 
-También puedes acceder directamente a los documentos:
+Documentación de la exposición:
 
 - [Ver la presentación en PDF](./docs/react-presentation.pdf)
-- [Descargar el guion de la presentación](./docs/guion-presentacion.docx?raw=1)
+- [Leer el guion de la presentación](./docs/guion-presentacion.md)
+- [Descargar el guion editable en Word](./docs/guion-presentacion.docx?raw=1)
+
 ## Recursos adicionales
 
 - [Documentación oficial de React](https://react.dev/)
@@ -138,4 +144,4 @@ También puedes acceder directamente a los documentos:
 
 ## Autoría
 
-Proyecto desarrollado por [Gema Miguel Pinillos](https://github.com/gmp395).
+Proyecto desarrollado por [Gema Miguel](https://github.com/gmp395).
