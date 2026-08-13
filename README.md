@@ -142,6 +142,6 @@ Documentación de la exposición:
 - [Documentación oficial de Vite](https://vite.dev/)
 - [MDN Web Docs](https://developer.mozilla.org/es/)
 
-## Autoría
+## Autora
 
-Proyecto desarrollado por [Gema Miguel](https://github.com/gmp395).
+**Gema Miguel** — [GitHub](https://github.com/gmp395)
