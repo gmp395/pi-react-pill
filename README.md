@@ -1,145 +1,95 @@
-# Píldora formativa: introducción a React
+# Cuenta bancaria
 
-Repositorio creado para una píldora formativa de Frontend sobre React, desarrollada durante una formación intensiva en Desarrollo Web Full Stack.
-
-La exposición combina una introducción teórica a los fundamentos de React con una demostración práctica mediante *live coding*.
+Ejercicio individual en Java que modela un sistema de cuentas bancarias aplicando herencia y polimorfismo, con una clase base `Account` y dos clases hijas, `SavingsAccount` y `CheckingAccount`, cada una con su propio comportamiento redefinido.
 
 ## Índice
 
-- [Objetivo](#objetivo)
-- [Contenido del repositorio](#contenido-del-repositorio)
-- [Conceptos tratados](#conceptos-tratados)
-- [Tecnologías utilizadas](#tecnologías-utilizadas)
-- [Requisitos previos](#requisitos-previos)
+- [Descripción](#descripción)
+- [Diagrama de clases](#diagrama-de-clases)
 - [Instalación](#instalación)
-- [Parte práctica](#parte-práctica)
-- [Presentación y guion](#presentación-y-guion)
-- [Recursos adicionales](#recursos-adicionales)
-- [Autoría](#autoría)
+- [Testing](#testing)
+- [Autora](#autora)
 
-## Objetivo
+## Descripción
 
-El objetivo de esta píldora formativa es explicar algunos de los conceptos fundamentales de React mediante una combinación de teoría y práctica.
+El ejercicio consiste en modelar tres clases relacionadas por herencia:
 
-Durante la exposición se muestra cómo crear una pequeña aplicación utilizando componentes, estado, eventos y renderizado dinámico.
+- **`Account`**: clase base con los atributos y operaciones comunes a cualquier cuenta (`balance`, `deposit`, `withdraw`, cálculo de interés mensual, comisión mensual y generación de extracto).
+- **`SavingsAccount`**: cuenta de ahorros que hereda de `Account`. Queda inactiva si el saldo cae por debajo de $10.000, y cobra una comisión de $1.000 por cada retiro que supere el quinto en el mes.
+- **`CheckingAccount`**: cuenta corriente que hereda de `Account`. Permite retirar más saldo del disponible, generando sobregiro, que se reduce automáticamente con los siguientes depósitos.
 
-## Contenido del repositorio
+## Diagrama de clases
 
-```text
-pi-react-pill/
-├── docs/
-│   ├── guion-presentacion.docx
-│   ├── guion-presentacion.md
-│   ├── react-presentation-cover.png
-│   └── react-presentation.pdf
-├── public/
-├── src/
-├── .gitignore
-├── eslint.config.js
-├── index.html
-├── package-lock.json
-├── package.json
-├── README.md
-└── vite.config.js
+```mermaid
+classDiagram
+    class Account {
+        #float balance
+        #int numberOfDeposits
+        #int numberOfWithdrawals
+        #float annualInterestRate
+        #float monthlyFee
+        +Account(float balance, float annualInterestRate)
+        +deposit(float amount)
+        +withdraw(float amount)
+        +calculateMonthlyInterest()
+        +monthlyStatement()
+        +print() String
+    }
+
+    class SavingsAccount {
+        #boolean active
+        +SavingsAccount(float balance, float annualInterestRate)
+        +deposit(float amount)
+        +withdraw(float amount)
+        +monthlyStatement()
+        +print() String
+    }
+
+    class CheckingAccount {
+        #float overdraft
+        +CheckingAccount(float balance, float annualInterestRate)
+        +deposit(float amount)
+        +withdraw(float amount)
+        +monthlyStatement()
+        +print() String
+    }
+
+    Account <|-- SavingsAccount
+    Account <|-- CheckingAccount
 ```
 
-- `src/`: código fuente utilizado durante la demostración práctica.
-- `public/`: recursos públicos de la aplicación.
-- `docs/react-presentation.pdf`: diapositivas utilizadas durante la exposición.
-- `docs/react-presentation-cover.png`: portada de la presentación.
-- `docs/guion-presentacion.md`: versión del guion preparada para su lectura en GitHub.
-- `docs/guion-presentacion.docx`: versión editable del guion.
-
-## Conceptos tratados
-
-- Componentes.
-- JSX.
-- Props.
-- Gestión de eventos.
-- Estado con el hook `useState`.
-- Renderizado condicional.
-- Renderizado de listas con `map()`.
-- Actualización dinámica de la interfaz.
-- Funcionamiento general del Virtual DOM.
-
-## Tecnologías utilizadas
-
-- React.
-- Vite.
-- JavaScript.
-- JSX.
-- CSS.
-- Node.js.
-- npm.
-- Git y GitHub.
-
-## Requisitos previos
-
-Para ejecutar el proyecto es necesario tener instalados:
-
-- [Node.js](https://nodejs.org/)
-- npm, incluido con Node.js
-- Git
+<a href="screenshots/03-class-diagram.png"><img src="screenshots/03-class-diagram.png" width="500"></a>
 
 ## Instalación
 
-Clona el repositorio:
+Clona el repositorio y entra en la carpeta del proyecto:
 
-```bash
-git clone https://github.com/gmp395/pi-react-pill.git
+```
+git clone https://github.com/gmp395/ex-java-cuenta-bancaria.git
+cd ex-java-cuenta-bancaria
 ```
 
-Accede a la carpeta del proyecto:
+Compila el proyecto con Maven:
 
-```bash
-cd pi-react-pill
+```
+mvn compile
 ```
 
-Instala las dependencias:
+## Testing
 
-```bash
-npm install
+El proyecto cuenta con 24 tests unitarios (JUnit 5) que cubren las tres clases, y utiliza JaCoCo para medir la cobertura.
+
+Para ejecutar los tests:
+
+```
+mvn test
 ```
 
-Ejecuta el proyecto en modo desarrollo:
+<a href="screenshots/01-test-24-tests-passing.png"><img src="screenshots/01-test-24-tests-passing.png" width="400"></a>
 
-```bash
-npm run dev
-```
+El reporte de cobertura se genera automáticamente en `target/site/jacoco/index.html`. La cobertura obtenida es del 100% en instrucciones y ramas, superando el mínimo exigido del 70%:
 
-Abre en el navegador la dirección indicada por Vite. Normalmente:
-
-```text
-http://localhost:5173
-```
-
-## Parte práctica
-
-Durante el *live coding* se desarrolla una pequeña aplicación para demostrar:
-
-1. La creación de componentes.
-2. El uso del hook `useState`.
-3. La gestión de eventos mediante `onClick`.
-4. El renderizado condicional.
-5. El renderizado de listas mediante `map()`.
-6. La actualización de la interfaz cuando cambia el estado.
-
-## Presentación y guion
-
-Pulsa sobre la portada para consultar la presentación completa:
-
-[![Portada de la presentación Introducción a React](./docs/react-presentation-cover.png)](./docs/react-presentation.pdf)
-
-Documentación de la exposición:
-
-- [Ver la presentación en PDF](./docs/react-presentation.pdf)
-- [Leer el guion de la presentación](./docs/guion-presentacion.md)
-
-## Recursos adicionales
-
-- [Documentación oficial de React](https://react.dev/)
-- [Documentación oficial de Vite](https://vite.dev/)
-- [MDN Web Docs](https://developer.mozilla.org/es/)
+<a href="screenshots/02-jacoco-coverage.png"><img src="screenshots/02-jacoco-coverage.png" width="400"></a>
 
 ## Autora
 
