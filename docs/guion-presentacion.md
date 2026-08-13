@@ -306,4 +306,4 @@ Antes de utilizar este guion, conviene comprobar:
 
 ## Autoría
 
-Guion preparado por [Gema Miguel Pinillos](https://github.com/gmp395).
+[Gema Miguel](https://github.com/gmp395).
